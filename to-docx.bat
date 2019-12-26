@@ -1,0 +1,1 @@
+pandoc -o "Complete-List.docx" -f gfm -t docx "Complete-List.md"
