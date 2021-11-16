@@ -1,5 +1,10 @@
 # Programas-USB
+
 Traducción Personal a Inglés de los Programas de Computación USB, incluye la información normalmente pedida. Dado que muchas personas las utilizan para aplicar a programas internacionales. Se agradece la colaboración si se tienen más traducciones o se notan errores.
+
+## Generación
+
+Para generar el merge de todos los Markdown en un solo archivo es necesario tener instalado CMake 3.18+ y Pandoc (instalado para todos los usuarios).
 
 ## Licencia
 
