@@ -33,7 +33,7 @@ set(MERGE_FILENAME "Course-Descriptions")
 set(MD_MERGE_TARGET "${CMAKE_CURRENT_SOURCE_DIR}/${MERGE_FILENAME}.md")
 message(STATUS "Generating ${MERGE_FILENAME} Markdown with Pandoc: ${MD_MERGE_TARGET}")
 execute_process(
-    COMMAND pandoc "--standalone" "--to=gfm"  "--toc" "--metadata=date:\"${TODAY}\"" "--metadata=title:\"Universidad Simon Bolivar Course Descriptions\""  "--output=${MD_MERGE_TARGET}" ${PANDOC_INPUT}
+    COMMAND pandoc "--standalone" "--to=gfm"  "--toc" "--metadata=date:${TODAY}" "--metadata=title:Universidad Simon Bolivar Course Descriptions"  "--output=${MD_MERGE_TARGET}" ${PANDOC_INPUT}
     COMMAND_ERROR_IS_FATAL ANY
     COMMAND_ECHO STDOUT 
 )
