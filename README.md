@@ -2,9 +2,17 @@
 
 Traducción Personal a Inglés de los Programas de Computación USB, incluye la información normalmente pedida. Dado que muchas personas las utilizan para aplicar a programas internacionales. Se agradece la colaboración si se tienen más traducciones o se notan errores.
 
+## Agradecimientos
+
+Se agradece la donación de tiempo de [Wilmer Oliveros](https://github.com/wilmerol) y [Pedro Rodríguez](https://github.com/xdgorgola) para corregir y mejorar las traducciones. También, se agradece las donaciones donadas por:
+
+- [Nico Jaua](https://github.com/NJaua)
+
 ## Generación
 
-Para generar el merge de todos los Markdown en un solo archivo es necesario tener instalado CMake 3.18+ y Pandoc (instalado para todos los usuarios).
+Para generar el merge de todos los Markdown y Docx en un solo archivo es necesario tener instalado CMake 3.18+ y Pandoc (instalado para todos los usuarios).
+
+Un ejemplo está en [Course-Descriptions.md](Course-Descriptions.md).
 
 ## Licencia
 

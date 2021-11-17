@@ -17,7 +17,7 @@ list(TRANSFORM PROGRAMAS PREPEND ${CMAKE_CURRENT_SOURCE_DIR}/)
 string(TIMESTAMP GENERATION_DATE "at %H:%M, on %A, %B %d, %Y (UTC)" UTC)
 
 set(INTRO_IN "${CMAKE_CURRENT_SOURCE_DIR}/Intro.in.md")
-set(INTRO "${CMAKE_CURRENT_BINARY_DIR}/Intro.md")
+set(INTRO "${CMAKE_CURRENT_BINARY_DIR}/generated/Intro.md")
 
 configure_file(${INTRO_IN} ${INTRO})
 
@@ -28,16 +28,18 @@ endforeach()
 
 string(TIMESTAMP TODAY UTC)
 
-set(MD_MERGE_TARGET "${CMAKE_CURRENT_SOURCE_DIR}/Programs.md")
-message(STATUS "Generating Programs Markdown with Pandoc: ${MD_MERGE_TARGET}")
+set(MERGE_FILENAME "Course-Descriptions")
+
+set(MD_MERGE_TARGET "${CMAKE_CURRENT_SOURCE_DIR}/${MERGE_FILENAME}.md")
+message(STATUS "Generating ${MERGE_FILENAME} Markdown with Pandoc: ${MD_MERGE_TARGET}")
 execute_process(
     COMMAND pandoc "--standalone" "--to=gfm"  "--toc" "--metadata=date:\"${TODAY}\"" "--metadata=title:\"Universidad Simon Bolivar Course Descriptions\""  "--output=${MD_MERGE_TARGET}" ${PANDOC_INPUT}
     COMMAND_ERROR_IS_FATAL ANY
     COMMAND_ECHO STDOUT 
 )
 
-set(DOCX_TARGET "${CMAKE_CURRENT_SOURCE_DIR}/Programs.docx")
-message(STATUS "Generating Programs DOCX with Pandoc: ${DOCX_TARGET}")
+set(DOCX_TARGET "${CMAKE_CURRENT_SOURCE_DIR}/${MERGE_FILENAME}.docx")
+message(STATUS "Generating ${MERGE_FILENAME} DOCX with Pandoc: ${DOCX_TARGET}")
 execute_process(
     COMMAND pandoc "--output=${DOCX_TARGET}" "--from=gfm" "--to=docx" ${MD_MERGE_TARGET}
     COMMAND_ERROR_IS_FATAL ANY
