@@ -10,7 +10,7 @@ Se agradece la donación de tiempo de [Wilmer Oliveros](https://github.com/wilme
 
 ## Generación
 
-Para generar el merge de todos los Markdown y Docx en un solo archivo es necesario tener instalado CMake 3.18+ y Pandoc (instalado para todos los usuarios).
+Para generar el merge de todos los Markdown y Docx en un solo archivo es necesario tener instalado CMake 3.18+ y Pandoc (instalado para todos los usuarios). Sólo es necesario configurar el proyecto con CMake.
 
 Un ejemplo está en [Course-Descriptions.md](Course-Descriptions.md).
 
