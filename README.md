@@ -4,7 +4,7 @@ Traducción Personal a Inglés de los Programas de Computación USB, incluye la 
 
 ## Agradecimientos
 
-Se agradece la donación de tiempo de [Wilmer Oliveros](https://github.com/wilmerol) y [Pedro Rodríguez](https://github.com/xdgorgola) para corregir y mejorar las traducciones. También, se agradece las donaciones donadas por:
+Se agradece la donación de tiempo de [Wilmer Oliveros](https://github.com/wilmerol) y [Pedro Rodríguez](https://github.com/xdgorgola) para corregir y mejorar las traducciones. También, se agradece las donaciones de:
 
 - [Nico Jaua](https://github.com/NJaua)
 
